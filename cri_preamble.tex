@@ -1,0 +1,66 @@
+% --- Font e Grafica ---
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{graphicx}
+
+% --- Definizione Colori ---
+\definecolor{MachGreen}{HTML}{3C5454}      
+\definecolor{MachLightGreen}{HTML}{8CB932} 
+\definecolor{MachGray}{HTML}{F5F5F5}       
+
+% --- Blocchi Arrotondati CON OMBRA ---
+\useinnertheme[shadow=true]{rounded} 
+\setbeamertemplate{blocks}[rounded=true, shadow=true]
+\setbeamertemplate{title page}[rounded=true, shadow=true]
+
+% --- Configurazione Colori del Tema ---
+\setbeamercolor{palette primary}{bg=MachGreen, fg=white}
+\setbeamercolor{palette secondary}{bg=MachGreen, fg=white}
+\setbeamercolor{palette tertiary}{bg=white, fg=MachGreen}
+\setbeamercolor{structure}{fg=MachGreen} 
+\setbeamercolor{titlelike}{parent=palette primary}
+\setbeamercolor{block title}{bg=MachGreen, fg=white}
+\setbeamercolor{block body}{bg=MachGray, fg=black}
+
+\setbeamertemplate{navigation symbols}{}
+
+% --- Header (Headline) ---
+\setbeamertemplate{headline}{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=8ex,dp=3ex]{white}%
+    \hspace*{2em}%
+    \raisebox{-1ex}{\includegraphics[height=4.5ex]{fem_logo.png}}% 
+    \hfill% 
+    {\color{MachGreen}\tiny Centro Ricerca e Innovazione}%
+    \hspace*{2em}% 
+  \end{beamercolorbox}%
+  {\color{MachLightGreen}\hrule height 1.5pt}%
+}
+
+% --- Footer (Footline) con Email a sinistra e Numero a destra ---
+\setbeamertemplate{footline}{%
+    {\color{MachGreen}\hrule height 0.5pt}%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=3ex,dp=1.5ex,leftskip=2em,rightskip=1em]{white}%
+      \tiny % Font piccolo
+      \textit{pietro.franceschi@fmach.it} % Email in corsivo a sinistra
+      \hfill 
+      \insertframenumber{} / \inserttotalframenumber % Numero slide a destra
+    \end{beamercolorbox}%
+    \vspace*{0.5ex}%
+}
+
+% --- Trucco per la Title Page (rimozione header/footer) ---
+\makeatletter
+\def\ps@navigation@titlepage{%
+  \setbeamertemplate{headline}{}%
+  \setbeamertemplate{footline}{}%
+}
+\addtobeamertemplate{title page}{\thispagestyle{navigation@titlepage}}{}
+\makeatother
+
+% --- Personalizzazione Liste ---
+\setbeamertemplate{itemize items}{\color{MachLightGreen}$\bullet$}
+\setbeamersize{text margin left=2em,text margin right=2em}
+
+% Colore dei link (email)
+\hypersetup{colorlinks=true, urlcolor=MachGreen, linkcolor=MachGreen}
