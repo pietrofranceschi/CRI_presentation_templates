@@ -3,6 +3,8 @@
 Presentation templates matching the CRI / FEM (Fondazione E. Mach) institutional style.
 Two output formats are supported: **LaTeX Beamer** (PDF) and **reveal.js** (HTML).
 
+**[Live reveal.js demo](https://pietrofranceschi.github.io/CRI_presentation_templates/cri_revealjs_example.html)**
+
 ---
 
 ## Requirements
