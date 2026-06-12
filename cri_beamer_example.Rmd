@@ -1,12 +1,12 @@
 ---
-title: "test"
-author: "Pietro Franceschi "
+title: "Beamer Template Example"
+author: "Pietro Franceschi"
 date: "\\scriptsize \\textit{pietro.franceschi@fmach.it}"
-output: 
+output:
   beamer_presentation:
     latex_engine: pdflatex
     includes:
-      in_header: "cri_preamble.tex"
+      in_header: "cri_beamer_preamble.tex"
 ---
 
 
