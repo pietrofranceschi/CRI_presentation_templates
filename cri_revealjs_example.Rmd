@@ -1,0 +1,139 @@
+---
+title: "Presentation Title"
+subtitle: "Optional subtitle"
+author: "Pietro Franceschi | pietro.franceschi@fmach.it"
+date: "June 2026"
+output:
+  revealjs::revealjs_presentation:
+    css: cri_css.css
+    self_contained: true
+    center: false
+    transition: fade
+    reveal_options:
+      slideNumber: "c/t"
+      controls: false
+      progress: false
+---
+
+## Outline
+
+- Background and motivation
+- Data and methods
+- Results
+- Conclusions
+
+---
+
+## Bullet points and emphasis
+
+Key results from the analysis:
+
+- **MachGreen bold** stands out for important terms
+- Regular text flows normally at this size
+- *Italic* for light emphasis
+- ~~Strikethrough~~ repurposed as a [highlight]{#highlights} style
+
+::: {.box-key}
+Core message or key takeaway goes here
+:::
+
+---
+
+## Two-column layout
+
+::::: {.cols}
+:::: {.col}
+**Left column**
+
+- Point one
+- Point two
+- Point three
+
+Use `.cols` + `.col` divs for
+side-by-side content.
+::::
+
+:::: {.col}
+**Right column**
+
+Any content here: text, lists,
+a small figure, or a table.
+
+```r
+lm(y ~ x, data = df)
+```
+::::
+:::::
+
+---
+
+## Code and output
+
+Inline code: use `dplyr::filter()` to subset.
+
+Block code with CRI left-border styling:
+
+```r
+library(tidyverse)
+
+df |>
+  group_by(treatment) |>
+  summarise(
+    mean_value = mean(response, na.rm = TRUE),
+    sd_value   = sd(response,   na.rm = TRUE)
+  )
+```
+
+---
+
+## Callout boxes
+
+::: {.box-green}
+**Standard note** — MachGreen border, light gray background.
+:::
+
+::: {.box-lightgreen}
+**Positive result** — MachLightGreen accent for good news or confirmations.
+:::
+
+::: {.box-blue}
+**Information** — teal-blue for background context or methodological notes.
+:::
+
+::: {.box-red}
+**Warning** — muted red for caveats, limitations, or watch-out points.
+:::
+
+---
+
+## Figures
+
+```{r echo=FALSE, fig.height=3.5, fig.width=7}
+par(mar = c(4, 4, 1, 1))
+plot(
+  pressure,
+  col  = "#3C5454",
+  pch  = 19,
+  xlab = "Temperature (°C)",
+  ylab = "Pressure (mmHg)"
+)
+```
+
+[Source: R built-in `pressure` dataset]{#notes}
+
+---
+
+## Conclusions
+
+- Finding one
+- Finding two
+- Finding three
+
+::: {.box-key}
+One-sentence summary of the whole story
+:::
+
+<br>
+
+**Contact:** pietro.franceschi@fmach.it
+**Fondazione E. Mach — Centro Ricerca e Innovazione**
