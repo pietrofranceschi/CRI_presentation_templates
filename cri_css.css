@@ -64,6 +64,9 @@
   font-size: 0.5em;
   font-weight: normal;
   margin-top: 1em;
+  /* author is rendered as an h2: undo the slide-title rule and alignment */
+  border-bottom: none;
+  text-align: center;
 }
 
 #title-slide .date {
