@@ -104,7 +104,7 @@ output:
     transition: fade
     reveal_options:
       slideNumber: "c/t"
-      controls: false
+      controls: true
       progress: false
 ---
 ```
